@@ -1,0 +1,4 @@
+[Wed Apr 24 01:51:18.673988 2019] [authz_core:error] [pid 10510] [client 155.41.16.138:64703] AH01630: client denied by server configuration: /home/classdash/projectclassdash/site/public/static, referer: http://45.79.174.35/
+[Wed Apr 24 01:52:04.451605 2019] [authz_core:error] [pid 10512] [client 155.41.16.138:64715] AH01630: client denied by server configuration: /home/classdash/projectclassdash/site/public/static, referer: http://45.79.174.35/admin/
+[Wed Apr 24 01:52:04.452321 2019] [authz_core:error] [pid 10511] [client 155.41.16.138:64708] AH01630: client denied by server configuration: /home/classdash/projectclassdash/site/public/static, referer: http://45.79.174.35/admin/
+[Wed Apr 24 01:52:04.460673 2019] [authz_core:error] [pid 10513] [client 155.41.16.138:64716] AH01630: client denied by server configuration: /home/classdash/projectclassdash/site/public/static, referer: http://45.79.174.35/admin/

@@ -1,0 +1,5 @@
+[client]
+database = 'classdashdb'
+user = 'classdash'
+password = 'Cla$$dash492'
+default-character-set = 'utf8'

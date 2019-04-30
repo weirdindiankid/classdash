@@ -1,0 +1,34 @@
+from rest_framework import serializers
+from .models import Interest
+from .models import Course
+from django.contrib.auth.models import User
+
+
+class InterestSerializer(serializers.ModelSerializer):
+
+	owner = serializers.ReadOnlyField(source='owner.username')
+
+	class Meta:
+		model = Interest
+		fields = ('id', 'owner', 'course', 'date_created', 'date_modified')
+		read_only_fields = ('date_created', 'date_modified')
+
+
+class UserSerializer(serializers.ModelSerializer):
+
+	interests = serializers.PrimaryKeyRelatedField(many=True, queryset=Interest.objects.all())
+
+	class Meta:
+		model = User
+		fields = ('id', 'username', 'interess')
+
+
+class CourseSerializer(serializers.ModelSerializer):
+
+	interests = serializers.PrimaryKeyRelatedField(many=True, queryset=Interest.objects.all())
+
+	class Meta:
+		model = Course
+		fields = ('id', 'code', 'section', 'title', 'semester', 'seats', 'instructor', 'date_created', 'date_modified','interests')
+		read_only_fields = ('date_created', 'date_modified')
+
